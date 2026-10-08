@@ -31,6 +31,11 @@ class CourseToolkitTest {
         assertTrue(result);
     }
 
+    @Test
+    void returnFalseForOddZero(){
+        assertTrue(CourseToolkit.isEven(0));
+    }
+
     @Test 
     void returnsFalseForLessThanTwo(){
         boolean result = CourseToolkit.isPrime(1);
@@ -123,6 +128,6 @@ class CourseToolkitTest {
 
     @Test
     void maxThrowsForEmptyArray() {
-        assertThrows(IllegalArgumentException.class, () -> CourseToolkit.max(new int[]{}));
+    assertThrows(IllegalArgumentException.class, () -> CourseToolkit.max(new int[]{}));
     }
 }
